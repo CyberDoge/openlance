@@ -9,7 +9,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Long id;
+    private int id;
 
     //ex @cyber_doge
     @Column(name = "username", unique = true)
@@ -26,7 +26,7 @@ public class User {
                     referencedColumnName = "id"))
     private Set<Role> roles;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 

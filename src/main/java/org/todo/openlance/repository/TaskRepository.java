@@ -14,4 +14,8 @@ public interface TaskRepository extends CrudRepository<Task, Integer> {
     @Query(value = "SELECT tag_id FROM Tag_to_Task WHERE task_id like ?1", nativeQuery = true)
     Set<Tag> findListByTagId(int id);
 
+    @Query(value = "SELECT tag_id FROM Tag_to_Task WHERE task_id like ?1", nativeQuery = true)
+    Set<Tag> sortBy(int id);
+
+
 }

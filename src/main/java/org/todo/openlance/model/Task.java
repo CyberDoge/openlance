@@ -11,7 +11,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private int id;
+    private long id;
     @Column(name = "title")
     private String title;
     @Column(name = "description")
@@ -19,14 +19,14 @@ public class Task {
     @Column(name = "active")
     private int active;
     @Column(name = "author_id")
-    private int author_id;
+    private int authorId;
     @Column(name = "contribution")
     private int contribution;
     @Column(name = "price")
     private int price;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "Tag_to_Task",
+    @JoinTable(name = "tag_task",
             joinColumns = @JoinColumn(name = "task_id",
             referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id",
@@ -60,11 +60,11 @@ public class Task {
     }
 
     public int getAuthor_id() {
-        return author_id;
+        return authorId;
     }
 
-    public void setAuthor_id(int author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public int getContribution() {
