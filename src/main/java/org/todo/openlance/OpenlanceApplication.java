@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class OpenlanceApplication {
-
+ //start point
 	public static void main(String[] args) {
 		SpringApplication.run(OpenlanceApplication.class, args);
 	}
