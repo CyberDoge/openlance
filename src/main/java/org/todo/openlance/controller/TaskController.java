@@ -22,7 +22,6 @@ public class TaskController {
     public class Greeting {
 
         private String content;
-
         public Greeting() {
         }
 
